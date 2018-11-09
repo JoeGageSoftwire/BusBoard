@@ -1,6 +1,6 @@
-﻿namespace BusBoard.ConsoleApp
+﻿namespace BusBoard.Api
 {
-    class Bus
+    public class Bus
     {
         public string id;
         public string towards;

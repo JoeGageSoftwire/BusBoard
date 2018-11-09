@@ -9,6 +9,8 @@ using RestSharp;
 using RestSharp.Authenticators;
 
 using Newtonsoft.Json;
+using BusBoard.Api;
+
 
 namespace BusBoard.ConsoleApp
 {

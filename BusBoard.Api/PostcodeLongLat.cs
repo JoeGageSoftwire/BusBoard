@@ -1,6 +1,6 @@
-﻿namespace BusBoard.ConsoleApp
+﻿namespace BusBoard.Api
 {
-    class PostcodeLongLat
+    public class PostcodeLongLat
     {
         public float longitude;
         public float latitude;

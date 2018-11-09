@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Web;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace BusBoard.ConsoleApp
+namespace BusBoard.Api
 {
-    static class ApiFetcher
+    public static class ApiFetcher
     {
 
         public static PostcodeJsonFormat GetCoordinates(string postcode)

@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Security.Permissions;
 
-namespace BusBoard.ConsoleApp
+namespace BusBoard.Api
 {
     public class StopPointJsonFormat
     {

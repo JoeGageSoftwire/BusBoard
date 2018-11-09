@@ -1,6 +1,6 @@
-﻿namespace BusBoard.ConsoleApp
+﻿namespace BusBoard.Api
 {
-    class PostcodeJsonFormat
+    public class PostcodeJsonFormat
     {
         public PostcodeLongLat result;
 
