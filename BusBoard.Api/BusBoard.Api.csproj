@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="ApiFetcher.cs" />
     <Compile Include="Bus.cs" />
+    <Compile Include="BusStop.cs" />
     <Compile Include="PostcodeJsonFormat.cs" />
     <Compile Include="PostcodeLongLat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
