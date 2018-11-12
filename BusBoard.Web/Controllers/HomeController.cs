@@ -20,25 +20,33 @@ namespace BusBoard.Web.Controllers
             // Write code here to populate the view model with info from the APIs.
             // Then modify the view (in Views/Home/BusInfo.cshtml) to render upcoming buses.
             var postcode = new BusInfo(selection.Postcode);
-            var coordinates = ApiFetcher.GetCoordinates(postcode.PostCode);
 
-            var stopPoints = ApiFetcher.GetStopPoints(coordinates.result);
-
-            var busStops = new List<BusStop>();
-
-            foreach (var stopPoint in stopPoints)
+            try
             {
-                var buses = ApiFetcher.GetBuses(stopPoint);
-                foreach (var bus in buses)
+                var coordinates = ApiFetcher.GetCoordinates(postcode.PostCode);
+
+                var stopPoints = ApiFetcher.GetStopPoints(coordinates.result);
+
+                var busStops = new List<BusStop>();
+
+                foreach (var stopPoint in stopPoints)
                 {
-                    bus.timeToStation = bus.timeToStation / 60;
+                    var buses = ApiFetcher.GetBuses(stopPoint);
+                    foreach (var bus in buses)
+                    {
+                        bus.timeToStation = bus.timeToStation / 60;
+                    }
+                    var busStop = new BusStop(buses, stopPoint.commonName);
+
+                    busStops.Add(busStop);
                 }
-                var busStop = new BusStop(buses, stopPoint.commonName);
 
-                busStops.Add(busStop);
+                return View(busStops);
             }
-
-            return View(busStops);
+            catch
+            {
+                return View();
+            }
         }
 
         public ActionResult About()
