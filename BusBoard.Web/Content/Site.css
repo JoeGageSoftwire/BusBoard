@@ -1,12 +1,22 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: linear-gradient(45deg, chocolate 45px, transparent 45px)64px 64px, 
+                linear-gradient(45deg, chocolate 45px, transparent 45px,transparent 91px, coral 91px, coral 135px, transparent 135px), 
+                linear-gradient(-45deg, chocolate 23px, transparent 23px, transparent 68px,chocolate 68px,chocolate 113px,transparent 113px,transparent 158px,chocolate 158px);
+    background-color: coral;
+    background-size: 128px 128px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color: wheat; 
+}
+
+.row {
+    padding-left: 15px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

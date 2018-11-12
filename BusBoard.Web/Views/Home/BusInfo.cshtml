@@ -3,7 +3,8 @@
     ViewBag.Title = "Bus Information";
 }
 <meta http-equiv="refresh" content="30">
-<h2>BusInfo</h2>
+<h2>BusInfo</h2>  <div class="tenor-gif-embed" data-postid="5129604" data-share-method="host" data-width="100%" data-aspect-ratio="2.0454545454545454"><a href="https://tenor.com/view/spinning-seal-water-funny-gif-5129604">Seal Spinning Spinning Spinning GIF</a> from <a href="https://tenor.com/search/spinning-gifs">Spinning GIFs</a></div>
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 <div class="row">
     @if (Model == null)
@@ -12,17 +13,20 @@
     }
     else
     {
+
         for (var j = 0; j < Model.Count; j++)
         {
+            <p> <br />
+            <br /></p>
             <p>The next 5 buses at @Model[j].StopName are:</p>
             for (var i = 0; i < Model[0].BusList.Count; i++)
             {
                 <p>@Model[j].BusList[i].id towards @Model[j].BusList[i].destinationName in the direction of @Model[j].BusList[i].towards arriving in @Model[j].BusList[i].timeToStation mins</p>
             }
-            <p> </p>
         }
     }
-
+    <p> <br />
+        <br /></p>
     <button onclick="goBack()">Go Back</button>
 
     <script>
